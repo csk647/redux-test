@@ -1,0 +1,11 @@
+{
+  "success": true,
+  "message": "정상적으로 처리되었습니다.",
+  "data": {
+    "isLoggedIn": true,
+    "userData": {
+      "id": "5ece89da3ec2ca2bf1f8b310",
+      "authToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI1ZWNlODlkYTNlYzJjYTJiZjFmOGIzMTAiLCJleHAiOjE2MTA0MjQxNDB9.bMFJ18x1UwGcq0gCxW5q0ro1lRB4wzhKYFS-98cdBi4"
+    }
+  }
+}

@@ -1,17 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+import rootReducer from "./redux/rootReducer"
+import "./index.css";
+import App from "./App";
+
+const store = createStore(rootReducer)
+//프로젝트 당 store는 하나. 상태를 저장하는 store. 첫번째 인자로 reducer
+//createStore로 처음에 store 생성시 reducer가 init 액션으로 한번 불림 그다음 dispatch로 reducer불림
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </Provider>,
+  document.getElementById("root")
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// ReactDOM.render(
+//   <Provider store={createStore(rootReducer)}>
+//     <App />
+//   </Provider>,
+//   document.getElementById("root")
+// );
+
